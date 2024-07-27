@@ -20,11 +20,11 @@ Command to commit code: git commit -m "your meassage" (-m: message).
 - track code: git add .
 - save code into git: git commit -m ""
 - push file:
-+ when push the first repo to github: " git push origin master"--> an error: fatal: 'origin' does not appear to be a git repository. 
-. Create an empty repo on github
-. Connect local repo to empty repo on git hub: git remote add origin repo_url
-. checking remote connect status: git remote -v
-. push repo the first time into github: git push -u origin master
-. the next time: git push
+- when push the first repo to github: " git push origin master"--> an error: fatal: 'origin' does not appear to be a git repository. 
++ Create an empty repo on github
++ Connect local repo to empty repo on git hub: git remote add origin repo_url
++ checking remote connect status: git remote -v
++ push repo the first time into github: git push -u origin master
++ the next time: git push
 
 
