@@ -1,0 +1,38 @@
+1. Giới thiệu về git
+- Git là một phần mềm giúp quản lý phiên bản code: Version Control System ( VCS)
+- Phân loại: 3 loại
+. Hệ thống cục bộ: máy local
+. Hệ thống quản lý trung tâm: Có data base, cho phép nhiều máy cùng làm việc
+. Hệ thống quản lý phân tán: Download code về local sau đó upload lên database
+2. Cài đặt Git trên máy trạm
+- Cài đặt Git.
+. Trên macOS:  Dùng lệnh
+brew install git
+. Trên Linux:
+Ubutu: Sudo apt install git-all
+CentOS: Sudo yum install git
+. Trên window: cải qua phần mềm
+- Kiểm tra version: git --version
+- Cấu hình git:
+. Kiểm tra các cấu hình của git: git config --list
+. Thiết lập cấu hình name: git config --global user.name "Ten user"
+. Thiết lập cấu hình email: git config --global user.email "Your email"
+→ global giúp chỉ ra cấu hình này sử dụng cho toàn bộ tất cả các phiên bản git trên máy trạm.
+3. Một số khái niệm khi làm việc với git
+- Khi làm việc với git, file có 3 trạng thái
+. Commited: Dữ liêu đã được lưu trữ an toàn trong database của git ( local)
+. Modified: Dữ liệu đã bị sửa đổi nhưng chưa được lưu vào database ( local)
+. Staged: Đánh dấu các file đã sửa đổi, chuẩn bị Commit
+- Tại git, Dự án được chia ra làm ba khu vực
+. Thư mục làm việc: Working tree: Chứa bản sao phiên bản cụ thể của dự án
+. Khu vực sắp xếp: ( staging ): File nằm trong thư mục git, chứa thông tin Commit
+. Thư mục Git ( Git Directory): Nơi Git lưu Database các file Metadata
+. Working Directory → Stage Fixes → Staging Area → commit → .git Directory ( Reponsitory) → checkput the project → Working Directory
+
+VD:
+- Tạo ra thư mục thực hành git: Git-Knowledge: mkdir Git-Knowledge
+- Khởi tạo ra một repository ( kho chứa git ): git init
+- Thực hiện lưu một phiên bản vảo git
+. git add . // Đánh giấu tất cả các file đã thêm và sửa đổi
+. git commit -m " Comment when you commit "// Thêm file vào database ( local)
+- Kiểm tra tất cả phiên bản đã commit: git log ---online
