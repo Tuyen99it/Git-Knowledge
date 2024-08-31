@@ -33,6 +33,8 @@ VD:
 - Tạo ra thư mục thực hành git: Git-Knowledge: mkdir Git-Knowledge
 - Khởi tạo ra một repository ( kho chứa git ): git init
 - Thực hiện lưu một phiên bản vảo git
-. git add . // Đánh giấu tất cả các file đã thêm và sửa đổi
+. git add . // Đánh giấu tất cả các file đã thêm và sửa đổi → Đưa dữ liệu vào vùng " Staging "
 . git commit -m " Comment when you commit "// Thêm file vào database ( local)
 - Kiểm tra tất cả phiên bản đã commit: git log ---online
+- Kiểm tra Code trong Working Directory and Reponsitory ( .git Directory ): git status → "orking tree clean" code trong thư mục làm việc và code ở database giống nhau.
+
