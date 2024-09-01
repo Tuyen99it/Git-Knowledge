@@ -18,6 +18,9 @@ C1 → C2 → C3 → beta :  B1  →  B2
 . Xoá nhánh master: git branch -D master
 . Tạo nhánh master từ nhánh m: git branch master
 . Gộp nhánh D3 và B2 bằng rebase: git rebase beta: git rebase beta → sử lý file sung đột → thực hiện đánh chỉ mục lại: git add . → tiếp tục gộp file: git rebase --continue
+3. Làm việc remote repository trên server lưu trữ git
+- Thực hiện lấy dữ liệu trên server git
+- thực hiện đẩy dữ liệu lên server git
 
 
 
