@@ -1,0 +1,17 @@
+1. Làm việc với local repository
+- tạo một dự án repo mới, khởi tạo một kho chứa git
+- Các lệnh git cơ bản
+. Kiểm tra trạng thái của thư mục làm việc: git status
+. Kiểm tra các nhánh trên gỉt: git branch
+. Đưa file (  untracking file or modified file ) vào vùng staged ( git theo dõi file): git add <tên file>
+. Lưu file ở staged vào database của git: git commit -m " comment của commit "
+. Check log của commit: git log // Head: đóng vai trò như là một con trỏ. Nó cho ta biết ta đang làm việc ở nhành nào của git
+. Lấy lại file từ commit cuối : git restore .
+. Kiểm tra sự khác biệt giữa file làm việc và file commit cuối: git diff --staged
+. Lấy thông tin log summary: git log --online
+. Đưa file về file tại thời điểm commit trước đó ( bất kỳ ): git checkout <ID của commit> -- < file cần phục hổi, . là phục hồi tất cả các file >
+. Đưa file ra khỏi vùng staged: git restore --staged
+. Tạo ra các file mà git không theo dõi: Tạo ra file .gitignore ở thư mục gốc của dự án
+. Sửa đổi commit cuối cùng: git commit --amend -m " nội dung commit"
+
+
