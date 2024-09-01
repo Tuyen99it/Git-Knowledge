@@ -21,7 +21,44 @@ C1 → C2 → C3 → beta :  B1  →  B2
 3. Làm việc remote repository trên server lưu trữ git
 - Thực hiện lấy dữ liệu trên server git
 - thực hiện đẩy dữ liệu lên server git
-
+. Liệt kê tất cả các kết nối tới máy local: git remote
+. Kiểm tra trạng thái của remote: git remote -v
+. Kểt nối remote tới một địa chỉ server: git remote add <tên remote > < Địa chỉ url server >
+. Remove remote: git remote rm xyz
+4. Thực hiện đẩy dữ liệu lên server
+. Đẩy dữ liệu lên sever: git push < tên remote> < tên nhánh đẩy lên>
++ VD:  Đẩy dữ liệu từ nhánh master lần đầu lên server ( -u: upstream ): git push -u origin master
+. Kiểm tra nhánh nào đã được push lên remote: git branch -a
+. Đẩy tất cả các nhánh lên remote: git push origin --all
+. Xoá nhánh trên remote: git push --delete origin <tên nhánh>
+5. Lấy dữ liệu về local: git clone, git pull
+. Tải repo từ xa: git clone < địa chỉ lưu trữ git > → Tự đông lấy về nhánh master
+. Lấy các nhán khác trên remote:
+. Cập nhật các thông tin thay đổi của remote: git fetch
+. Cập nhật những commit mới từ remote do người khác cập nhật về local: git pull < tên remote > < tên nhánh >
+. Kiểm tra commit trên remote: git log --oneline origin/master
+6. git hub/ git lab
+7. Tag trong Git. Đánh dấu phiên bản và đẩy lên git
+- Sử dụng tag để đánh dấu các commit đặc biệt, Các commit này có thể là các bản release
+. Liệt kê tất cả các tag: git tag
+. Tag đầy đủ: git tag -a "tên tag " -m " Thông đệp của tag " <mã hash của commit> : VD: git tag -a "v1.0" -m " phiên ban beta 1" → Thực hiện đặt mã tag cho commit cuối cùng 
+. Xem thông tin chi tết của tag: git show <tên tag>: git show v1.0
+. Thực hiện xoá một tag: git tag -d <tên tag>
+. Tag đóng vai trò như mã hash của commit: VD git checkout v1.0
+. Push tag lên remote: git push origin <tên tag>
+. Push tất cả các tags lên remote: git push origin --tags
+. Xoá tags ở remote: git push --delete origin <tên tag>
+8. Chức năng fork và pull request
+- Fork dùng để lấy về một repo và cùng phát triển cùng tác giả.
+. Lấy repo về: fork icon 
+. Thực hiện gửi yêu cầu update tới chủ sở hữu: Pull request → create pull request
+. Merge pull request: merge pull request
+9. Git tk và git gui
+. Quan sát chực quan về lịch sử commit: gitk → chỉ có thể xem được lịch sử của nhánh main
+. Check lịch sử của nhánh khác: git switch <tên nhánh> → gitk
+. Thực hiện cômmit bằng tool git → git gui
+10. Git trong một số IDE
+. Cài extension: git history cho vscode
 
 
 
