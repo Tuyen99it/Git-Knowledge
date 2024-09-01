@@ -59,6 +59,19 @@ C1 → C2 → C3 → beta :  B1  →  B2
 . Thực hiện cômmit bằng tool git → git gui
 10. Git trong một số IDE
 . Cài extension: git history cho vscode
-
-
-
+11. SSH key và cấu hình Github, gitlab sử dụng SSH key
+- Sử dụng SSH để phát sinh ssh key. Để môi lần push/pull dữ liệu lên git ta không cần nhập mk mà ứng dụng tự động xác thực bằng mã SSH
+- Phát sinh ssh private key and public key
+. Tạo ra thư mục để lưu trữ ssh key: vd: mkdir gitkey
+. Tạo file private key có tên rsa:  ssh-keygen -t rsa -f id_rsa
+→ tự động phát sinh cho ta 2 file: file  id_rsa và private key: id_rsa.pub
+→ mở file id_rsa.pub lấy private key: cat id_rsa.pub
+→ copy private key → paste vào key ở github
+. Mở file cấu hình trên máy để thiết lập config: code ~/.ssh/config 
+. Thiết lập file cấu hình:
+Host github.com
+    User git
+    Port 22
+    PreferredAuthentications publickey
+    IdentityFile " C:\Users\Nguyen Tuyen\c#\gitkey\id_rsa" 
+. Lấy IdentityFile → terminal: pwd 
