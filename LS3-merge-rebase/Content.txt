@@ -1,0 +1,24 @@
+1. Chuẩn bị tài liệu học tập
+C1 → C2 → C3 → beta :  B1  →  B2
+             → master:   D1→D2
+2. Thực hành gộp nhánh D2 với B2
+- Có hai cách gộp nhánh: git merge và git rebase
++ Sao lưu nhánh beta: git branch B
++ Sao lưu nhánh master: git branch M
+* Gộp nhánh beta vào master sử dụng " git merge "
++ git merge beta → CONFLICT (content): Merge conflict in LS3-merge-rebase/a.txt
+→ sử lý sung đột: 
++ Accept current change: chấp nhập sửa đổi ở nhánh master
++ Accept incoming change: chấp nhập sửa đổi ở nhánh beta
++ Accept both changes: chấp nhập sửa đổi ở cả hai nhánh
+. Thực hiện đánh chỉ mục lại: git add .
+. Thực hiện commit: git commit -m"M"
+* Gộp nhánh bằng phương pháp: " git rebase "
++ Sao lưu nhánh master từ nhánh M
+. Xoá nhánh master: git branch -D master
+. Tạo nhánh master từ nhánh m: git branch master
+. Gộp nhánh D3 và B2 bằng rebase: git rebase beta: git rebase beta → sử lý file sung đột → thực hiện đánh chỉ mục lại: git add . → tiếp tục gộp file: git rebase --continue
+
+
+
+

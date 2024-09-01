@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Sửa đổi beta commit B1
-=======
 Sửa đổi nhánh master
->>>>>>> 9ffa058 (D1)

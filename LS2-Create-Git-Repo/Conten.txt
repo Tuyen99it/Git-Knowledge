@@ -13,5 +13,27 @@
 . Đưa file ra khỏi vùng staged: git restore --staged
 . Tạo ra các file mà git không theo dõi: Tạo ra file .gitignore ở thư mục gốc của dự án
 . Sửa đổi commit cuối cùng: git commit --amend -m " nội dung commit"
-
+. Huỷ đi commit cuối cùng ( undo ): 
++ git reset --soft HEAD~1// xoá đi commit, nhưng nội dung không bị xoá mà được chuyển đến vùng staging
++ git reset --hard HEAD~1// Xoá vĩnh viễn nội dung của commit cuối
+. Xoá nội dung trong vùng staged: git reset -- <tên file>
+. Phục hồi file về trạng thái snapshoot file làm việc ( add . nhưng chưa commit ): git restore -- <tên file>
+2. Nhánh trong git ( branch )
+- Branch trên git đóng vai trò như là một cơ sở lưu trữ code của git
+- Tiếp tục làm việc trên file GIT-KNOWLEDGE
+. Kiểm tra trạng thái của git: git log --oneline
+. Kiểm tra các nhánh trên git: git branch
+. Tạo ra một nhánh mới: git branch <tên nhánh>: VD tạo ra nhánh alpha: git branch alpha. Lúc này tại nhánh alpha lưu trữ code của tất cả các commit trước đóng
+. Để chuyển nhánh làm việc: 
++ git checkout <tên nhánh> VD: git checkout alpha
++ git switch <tên nhánh > VD: git switch alpha
+. Gộp nhánh: 
++ chuyển HEAD về nhánh master: git checkout master
++ gộp nhánh sửa đổi với nhánh master: git merge < tên nhánh cần gộp vào nhánh master>
+. Xoá nhánh: git branch -d < tên nhánh cần xoá >
+. Vẽ biểu đồ rẽ nhánh commit: git log --oneline --graph
+. Xử lý xung đột ( conplict) bằng tool merge tool: git mergetool // Sung đột giữa các nhánh sảy ra khi một file đồng thời đang được sửa đổi bằng nhiều nhánh. Khi merge git không xác định được commit nào là offical
++ Khi file bị sung đột, muốn dữ lại commit ở nhánh master: trong terminal của mergetool → :diffg LO
++ Khi file bị sung đột, muốn dữ lại commit ở nhánh phụ: trong terminal của mergetool → :diffg RE
++ Khi file bị sung đột, muốn dữ lại commit ở cả nhánh phụ và master: trong terminal của mergetool → :diffg BA
 
